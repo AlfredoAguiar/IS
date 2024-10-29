@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<library>
+    <book>
+        <title>Python</title>
+        <author>toninho test</author>
+        <publication_date>2023-06-15</publication_date>
+        <genre>Programming</genre>
+        <isbn>123-4567890123</isbn>
+    </book>
+    <book>
+        <title>XML teste</title>
+        <author>fredo</author>
+        <publication_date>2024-01-10</publication_date>
+        <genre>Data Management</genre>
+        <isbn>987-6543210987</isbn>
+    </book>
+    <book>
+        <title>Pythontest3</title>
+        <author>toninho test</author>
+        <publication_date>2003-07-05</publication_date>
+        <genre>Programming</genre>
+        <isbn>123-4567890123</isbn>
+    </book>
+    <book>
+        <title>teste34</title>
+        <author>Maria joana</author>
+        <publication_date>2065-03-15</publication_date>
+        <genre>Data Management</genre>
+        <isbn>237-652543676</isbn>
+    </book>
+</library>
