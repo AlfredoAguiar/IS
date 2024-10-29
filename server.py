@@ -53,7 +53,7 @@ PORT = 65432
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
     server_socket.bind((HOST, PORT))
     server_socket.listen()
-    print("Servidor a escutar no endereço", HOST, "e porta", PORT)
+    print("Servidor a ouvir no endereço", HOST, "e porta", PORT)
 
     conn, addr = server_socket.accept()
     with conn:

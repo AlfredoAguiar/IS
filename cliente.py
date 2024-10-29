@@ -13,7 +13,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
 
         if file_path.lower() == "sair":
             client_socket.sendall(file_path.encode('utf-8'))
-            print("Comando 'sair' enviado. Encerrando conexão.")
+            print("Comando 'sair' enviado. A encerrar conexão.")
             break
 
         try:
