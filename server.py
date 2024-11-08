@@ -47,7 +47,7 @@ def validate():
         with open(xml_file_path, "r") as file:
             xml_content = file.read()
 
-        schema_path = "samples/xmlValidate/schema.xsd"
+        schema_path = "GVL/xmlValidate/schema.xsd"
         xml_doc = etree.fromstring(xml_content)
         xml_schema = etree.XMLSchema(file=schema_path)
 

@@ -8,7 +8,7 @@ PORT = 65432  # Porta de comunicação com o servidor
 def exibir_menu():
     print("===== MENU =====")
     print("1. Converter CSV para XML")
-    print("2. Exibir XML gerado")
+    print("2. Exibir 2 linhas do XML gerado")
     print("3. Validar xml")
     print("4. XQuery - Consultar por cidade")
     print("5. XQuery - Consultar por ID de transação")
