@@ -1,47 +1,54 @@
+
 services:
+ grpc-server:
+  build: ./grpc-server
+  container_name: grpc-server
+  ports:
+  - "50051:50051"
+  volumes:
+  - grpc-server:/app/media
+# Define the OS/Container variable environments needed by the grpc server
+  environment:
+- GRPC_SERVER_PORT=50051
+- MAX_WORKERS=10
+- MEDIA_PATH=/app/media
+- DBNAME=mydatabase
+- DBUSERNAME=myuser
+- DBPASSWORD=mypassword
+- DBHOST=db
+- DBPORT=5432
 
+  depends_on:
+- db
+ rest-api-server:
+  build: ./rest_api_server
+  container_name: rest_api_server
+  ports:
+    - "8000:8000"
+  # Define the OS/Container variable environments needed by the grpc
+  server
+  environment:
+    - GRPC_PORT=50051
+    - GRPC_HOST=grpc-server
+    - DBNAME=mydatabase
+    - DBUSERNAME=myuser
+    - DBPASSWORD=mypassword
+    - DBHOST=db
+    - DBPORT=5432
+  depends_on:
+    - db
+    - grpc-server
   db:
-    container_name: is-db
-    build: docker/images/db
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-    ports:
-      - "5432:5432"
-
-  rpc-server:
-    container_name: is-rpc-server
-    build: docker/images/python
-    volumes:
-      - "./src/rpc-server:/app"
-    depends_on:
-      - db
-
-  rpc-client:
-    container_name: is-rpc-client
-    build: docker/images/python
-    volumes:
-      - "./src/rpc-client:/app"
-      - "./docker/volumes/data:/data"
-    depends_on:
-      - rpc-server
-
-  sample-db-access:
-    container_name: is-db-access
-    build: docker/images/python
-    volumes:
-      - "./src/samples/db-access:/app"
-      - "./docker/volumes/data:/data"
-    depends_on:
-      - rpc-server
-
-  sample-xml-generation:
-    container_name: is-xml-generation
-    build: docker/images/python
-    volumes:
-      - "./src/samples/xml-generation:/app"
-      - "./docker/volumes/data:/data"
-    depends_on:
-      - rpc-server
-
-volumes:
-  postgres_data:
+  image: postgres:latest
+  container_name: postgres-db
+  environment:
+  POSTGRES_USER: myuser
+  POSTGRES_PASSWORD: mypassword
+  POSTGRES_DB: mydatabase
+   ports:
+    - "5432:5432"
+  volumes:
+    - pgdata:/var/lib/postgresql/data
+  volumes:
+  grpc-server:
+  pgdata:

@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+service TransactionService {
+  // Method to convert CSV to XML
+  rpc ConvertCSVToXML(Empty) returns (StringResponse);
+
+  // Method to get the first two transactions from the XML
+  rpc GetFirstTwoTransactions(Empty) returns (StringResponse);
+
+  // Method to validate XML
+  rpc ValidateXML(Empty) returns (StringResponse);
+
+  // Method to query by city
+  rpc QueryByCity(QueryRequest) returns (StringResponse);
+
+  // Method to query by transaction ID
+  rpc QueryByTransactionID(QueryRequest) returns (StringResponse);
+}
+
+// Define the response message format
+message StringResponse {
+  string message = 1;
+}
+
+// Define the request message format (city or transaction ID)
+message QueryRequest {
+  string query = 1;
+}
+
+// Empty message for requests that don't need any input
+message Empty {}

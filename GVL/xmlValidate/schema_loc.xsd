@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <!-- Root element -->
+  <xs:element name="Transactions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Transaction" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+
+              <!-- Customer element -->
+              <xs:element name="Customer">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Customer_Name" type="xs:string" />
+                    <xs:element name="Customer_Category" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <!-- Products element -->
+              <xs:element name="Products">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Product" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="Total_Items" type="xs:integer" />
+                          <xs:element name="Total_Cost" type="xs:decimal" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <!-- Transaction details -->
+              <xs:element name="Transaction_ID" type="xs:string" />
+              <xs:element name="Date" type="xs:dateTime" />
+              <xs:element name="Payment_Method" type="xs:string" />
+              <xs:element name="Store_Type" type="xs:string" />
+              <xs:element name="Discount_Applied" type="xs:boolean" />
+              <xs:element name="Season" type="xs:string" />
+              <xs:element name="Promotion" type="xs:string" />
+
+              <!-- Local element -->
+              <xs:element name="local">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="City" type="xs:string" />
+                    <xs:element name="Coordinates">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Latitude" type="xs:decimal" />
+                          <xs:element name="Longitude" type="xs:decimal" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
