@@ -2,10 +2,10 @@ import ast
 from lxml import etree  # Para a função transform_boolean_strings
 import xml.etree.ElementTree as ET  # Manipulação de XML
 import xml.dom.minidom as md  # Para formatar a saída em XML
-from GVL.xmlGeneration.csv_reader import CSVReader
-from GVL.xmlGeneration.entities.Transaction import Transaction
-from GVL.xmlGeneration.entities.Customer import Customer
-from GVL.xmlGeneration.entities.Product import Product
+from .csv_reader import CSVReader
+from .entities.Transaction import Transaction
+from .entities.Customer import Customer
+from .entities.Product import Product
 
 
 class CSVtoXMLConverter:

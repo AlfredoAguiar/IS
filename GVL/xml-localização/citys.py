@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 
-xml_path = "../../data/Retail_Transactions_Dataset_transformed.GVL"
+xml_path = "../../data/Retail_Transactions_Dataset.xml"
 
 tree = ET.parse(xml_path)
 root = tree.getroot()
@@ -20,4 +20,4 @@ for transaction in root.findall('.//Transaction'):
 
 output_tree = ET.ElementTree(output_root)
 
-output_tree.write("unique_cities.GVL")
+output_tree.write("dt/unique_cities.xml")

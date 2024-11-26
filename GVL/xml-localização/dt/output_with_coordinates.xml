@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+
+<UniqueCities>
+
+  <City>
+
+    New York
+
+    <Coordinates>
+
+      <Latitude>40.7127281</Latitude>
+
+      <Longitude>-74.0060152</Longitude>
+
+    </Coordinates>
+
+  </City>
+
+  <City>
+
+    Houston
+
+    <Coordinates>
+
+      <Latitude>29.7589382</Latitude>
+
+      <Longitude>-95.3676974</Longitude>
+
+    </Coordinates>
+
+  </City>
+
+  <City>
+
+    Miami
+
+    <Coordinates>
+
+      <Latitude>25.7741728</Latitude>
+
+      <Longitude>-80.19362</Longitude>
+
+    </Coordinates>
+
+  </City>
+
+  <City>
+
+    Seattle
+
+    <Coordinates>
+
+      <Latitude>47.6038321</Latitude>
+
+      <Longitude>-122.330062</Longitude>
+
+    </Coordinates>
+
+  </City>
+
+  <City>
+
+    Atlanta
+
+    <Coordinates>
+
+      <Latitude>33.7489924</Latitude>
+
+      <Longitude>-84.3902644</Longitude>
+
+    </Coordinates>
+
+  </City>
+
+  <City>
+
+    Boston
+
+    <Coordinates>
+
+      <Latitude>42.3554334</Latitude>
+
+      <Longitude>-71.060511</Longitude>
+
+    </Coordinates>
+
+  </City>
+
+  <City>
+
+    Dallas
+
+    <Coordinates>
+
+      <Latitude>32.7762719</Latitude>
+
+      <Longitude>-96.7968559</Longitude>
+
+    </Coordinates>
+
+  </City>
+
+  <City>
+
+    Chicago
+
+    <Coordinates>
+
+      <Latitude>41.8755616</Latitude>
+
+      <Longitude>-87.6244212</Longitude>
+
+    </Coordinates>
+
+  </City>
+
+  <City>
+
+    San Francisco
+
+    <Coordinates>
+
+      <Latitude>37.7792588</Latitude>
+
+      <Longitude>-122.4193286</Longitude>
+
+    </Coordinates>
+
+  </City>
+
+  <City>
+
+    Los Angeles
+
+    <Coordinates>
+
+      <Latitude>34.0536909</Latitude>
+
+      <Longitude>-118.242766</Longitude>
+
+    </Coordinates>
+
+  </City>
+
+</UniqueCities>
