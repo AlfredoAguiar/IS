@@ -8,11 +8,25 @@ from grpc import RpcError
 import transaction_service_pb2
 import transaction_service_pb2_grpc
 
-# Logic to convert CSV to XML (placeholder for actual logic)
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
+from IS.GVL.xmlGeneration.csv_to_xml_converter import CSVtoXMLConverter
+
+
+# Logic to convert CSV to XML
 def convert_csv_to_xml():
     try:
-        # CSV to XML conversion logic goes here
+
+        converter = CSVtoXMLConverter("..//data/Retail_Transactions_Dataset.csv")
+        xml_root = converter.to_xml()
+
         return "CSV to XML conversion successful."
+
+    except ImportError as e:
+        raise RpcError(f"Import error during CSV to XML conversion: {str(e)}")
     except Exception as e:
         raise RpcError(f"Error during CSV to XML conversion: {str(e)}")
 
